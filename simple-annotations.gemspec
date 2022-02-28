@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
     s.date = "2021-12-27"
     s.summary = "Simple method annotations like in java or Python methods decorators"
     s.email = "romain@ultragreen.net"
-    s.homepage = "http://www.ultragreen.net"
+    s.homepage = "https://github.com/lecid/simple-annotations"
     s.description = "Simple method annotations like in java or Python methods decorators"
     s.files = `git ls-files`.split($/)
     s.required_ruby_version = '~> 2.7.0'
