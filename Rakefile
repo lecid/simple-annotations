@@ -11,7 +11,9 @@ require "rake/tasklib"
 require "roodi"
 require "roodi_task"
  
- 
+require "bundler/gem_tasks"
+
+
 RoodiTask.new() do | t |
 t.patterns = %w(lib/**/*.rb)
 t.config = "coding_convention.yml"
