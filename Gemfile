@@ -1,5 +1,5 @@
+# frozen_string_literal: true
 
-
-source 'https://artifactory-iva.si.francetelecom.fr/artifactory/api/gems/gemsproxy/'
+source 'https://rubygems.org'
 
 gemspec

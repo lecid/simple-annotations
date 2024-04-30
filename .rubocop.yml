@@ -1,0 +1,99 @@
+AllCops:
+    NewCops: enable
+    SuggestExtensions: false
+
+
+Gemspec/DevelopmentDependencies:
+  Exclude:
+    - 'simple-annotations.gemspec'
+
+# Offense count: 1
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines, beginning_only, ending_only
+Layout/EmptyLinesAroundClassBody:
+  Exclude:
+    - 'lib/simple-annotations.rb'
+
+# Offense count: 1
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: AllowInHeredoc.
+Layout/TrailingWhitespace:
+  Exclude:
+    - 'lib/simple-annotations.rb'
+
+# Offense count: 2
+# Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns.
+Metrics/MethodLength:
+  Max: 11
+
+# Offense count: 8
+# Configuration parameters: AsciiConstants.
+Naming/AsciiIdentifiers:
+  Exclude:
+    - 'sample/test.rb'
+    - 'samples/test.rb'
+
+# Offense count: 1
+# Configuration parameters: ExpectMatchingDefinition, CheckDefinitionPathHierarchy, CheckDefinitionPathHierarchyRoots, Regex, IgnoreExecutableScripts, AllowedAcronyms.
+# CheckDefinitionPathHierarchyRoots: lib, spec, test, src
+# AllowedAcronyms: CLI, DSL, ACL, API, ASCII, CPU, CSS, DNS, EOF, GUID, HTML, HTTP, HTTPS, ID, IP, JSON, LHS, QPS, RAM, RHS, RPC, SLA, SMTP, SQL, SSH, TCP, TLS, TTL, UDP, UI, UID, UUID, URI, URL, UTF8, VM, XML, XMPP, XSRF, XSS
+Naming/FileName:
+  Exclude:
+    - 'Rakefile.rb'
+    - 'spec/simple-annotations_spec.rb'
+    - 'lib/simple-annotations.rb'
+
+# Offense count: 2
+# Configuration parameters: MinNameLength, AllowNamesEndingInNumbers, AllowedNames, ForbiddenNames.
+# AllowedNames: as, at, by, cc, db, id, if, in, io, ip, of, on, os, pp, to
+Naming/MethodParameterName:
+  Exclude:
+    - 'lib/simple-annotations.rb'
+
+# Offense count: 4
+# Configuration parameters: EnforcedStyle, AllowedIdentifiers, AllowedPatterns.
+# SupportedStyles: snake_case, camelCase
+Naming/VariableName:
+  Exclude:
+    - 'lib/simple-annotations.rb'
+    - 'samples/test.rb'
+
+# Offense count: 2
+# This cop supports safe autocorrection (--autocorrect).
+Style/ClassMethods:
+  Exclude:
+    - 'lib/simple-annotations.rb'
+
+# Offense count: 3
+Style/ClassVars:
+  Exclude:
+    - 'lib/simple-annotations.rb'
+
+# Offense count: 2
+# This cop supports safe autocorrection (--autocorrect).
+Style/ColonMethodDefinition:
+  Exclude:
+    - 'lib/simple-annotations.rb'
+
+# Offense count: 5
+# Configuration parameters: AllowedConstants.
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'lib/simple-annotations.rb'
+    - 'samples/test.rb'
+
+# Offense count: 1
+# This cop supports unsafe autocorrection (--autocorrect-all).
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: always, always_true, never
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'samples/test.rb'
+
+# Offense count: 1
+Style/MissingRespondToMissing:
+  Exclude:
+    - 'lib/simple-annotations.rb'
