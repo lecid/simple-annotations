@@ -2,12 +2,6 @@
 
 require 'bundler/inline'
 
-gemfile do
-  source 'https://rubygems.org'
-
-  gem 'simple-annotations'
-end
-
 
 RSpec.configure do |config|
     config.before(:all, &:silence_output)
