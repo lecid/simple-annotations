@@ -91,6 +91,7 @@ Display
 
 ```
 {:test=>1234, :foobar=>{:color=>"cyan"}, :testbar=>[10, {}, [], "string"], :barfoo=>true, :footest=>"string"}
+```
 
 ### Defining Hooks
 
@@ -132,3 +133,4 @@ Display
 before
 test
 after
+```
