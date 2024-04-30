@@ -21,7 +21,7 @@ module Annotations
 
   def hooks(meth = nil)
     if meth
-      annotations(meth).select { |item, _val| RESERVED_ANNOTATIONS.include? item }
+      annotations(meth).slice(*RESERVED_ANNOTATIONS)
     else
       res = {}
       annotations.each_key do |val|
@@ -35,7 +35,7 @@ module Annotations
 
   def fields(meth = nil)
     if meth
-      annotations(meth).select { |item, _val| RESERVED_ANNOTATIONS.include? item }
+      annotations(meth).except(*RESERVED_ANNOTATIONS)
     else
       res = {}
       annotations.each_key do |val|

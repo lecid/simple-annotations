@@ -27,4 +27,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'version', '~> 1.1'
   s.add_development_dependency 'cyclonedx-ruby', '~> 1.1'
   s.add_development_dependency 'debride', '~> 1.12'
+  s.add_development_dependency 'diff-lcs', '~> 1.5.1'
 end

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'simple-annotations'
+require 'diff/lcs'
 
 RSpec.configure do |config|
 
