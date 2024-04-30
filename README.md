@@ -26,13 +26,12 @@ Install it yourself as:
 
     $ gem install carioca
 
-## Principe 
 
-![Carioca synoptic](assets/images/description_carioca.png)
 
-#  Usage
 
-## Adding annotation to a class
+##  Usage
+
+## Adding annotations to a class
 
 
 ```ruby 
@@ -49,10 +48,7 @@ class A
     return annotations(__callee__)
   end
 
-  
 end
-
-
 
 anA = A.new
 pp anA.method
@@ -63,3 +59,76 @@ Display
 
 ```
 {:test=>"string"}
+
+
+### Getting fields
+
+```ruby 
+require 'rubygems'
+require 'simple-annotations'
+
+class A
+  using AnnotationRefinement
+  annotate!
+
+  §foobar {:color => 'cyan' }   # Hash
+  §test 1234                    # Numeric
+  §foobar color: 'cyan'         # Hash by double splat, like keyword
+  §testbar 10, {}, [], 'string' # Hybrid by splat
+  §barfoo                       # Boolean set true
+  §footest 'string'             # String                    
+  def method
+      [...]
+  end
+
+end
+
+pp A.annotations[:method]
+
+```
+
+Display
+
+```
+{:test=>1234, :foobar=>{:color=>"cyan"}, :testbar=>[10, {}, [], "string"], :barfoo=>true, :footest=>"string"}
+
+### Defining Hooks
+
+Supporting 2 Hooks :
+
+- §after
+- §before
+
+Like :
+
+```ruby 
+require 'rubygems'
+require 'simple-annotations'
+
+class A
+  using AnnotationRefinement
+
+  annotate!
+
+  
+  §after -> { puts 'after' }
+  §before -> { puts 'before' }
+  def m1
+    puts 'test'
+  end
+
+  
+end
+
+
+
+anA = A.new
+anA.m1
+```
+
+Display
+
+```
+before
+test
+after
