@@ -1,4 +1,4 @@
-# Simmple Annotation 4 Ruby
+# Simple Annotations 4 Ruby
 
 Simple method annotations like in java or Python methods decorators
 
